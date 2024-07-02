@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de ropa TERESA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CREACIONES TECHI</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#carrito">Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Bienvenido a la Tienda de TERESA</h2>
+                <p>Encuentra la mejor ropa al mejor precio.</p>
+            </div>
+        </section>
+        <section id="productos" class="productos">
+            <h2>TIPO DE BORDADOS</h2>
+            <div class="producto-grid">
+                <div class="producto">
+                    <h3>DELANTALES</h3>
+                    <img src="camiseta.jpeg" alt="Camiseta">
+                    <p>Precio: $20</p>
+                    <button onclick="agregarAlCarrito('Camiseta', 20)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>LIMPIONES</h3>
+                    <img src="pantalones.jpg" alt="Pantalones">
+                    <p>Precio: $40</p>
+                    <button onclick="agregarAlCarrito('Pantalones', 40)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Chaqueta</h3>
+                    <img src="chaqueta.jpg" alt="Chaqueta">
+                    <p>Precio: $60</p>
+                    <button onclick="agregarAlCarrito('Chaqueta', 60)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Vestido</h3>
+                    <img src="vestido.jpg" alt="Vestido">
+                    <p>Precio: $50</p>
+                    <button onclick="agregarAlCarrito('Vestido', 50)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Sudadera</h3>
+                    <img src="sudadera.jpg" alt="Sudadera">
+                    <p>Precio: $30</p>
+                    <button onclick="agregarAlCarrito('Sudadera', 30)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Falda</h3>
+                    <img src="falda.jpg" alt="Falda">
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Falda', 25)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Camisa</h3>
+                    <img src="camisa.jpg" alt="Camisa">
+                    <p>Precio: $35</p>
+                    <button onclick="agregarAlCarrito('Camisa', 35)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Chaleco</h3>
+                    <img src="chaleco.jpg" alt="Chaleco">
+                    <p>Precio: $45</p>
+                    <button onclick="agregarAlCarrito('Chaleco', 45)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Zapatos</h3>
+                    <img src="zapatos.jpg" alt="Zapatos">
+                    <p>Precio: $70</p>
+                    <button onclick="agregarAlCarrito('Zapatos', 70)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+        <section id="carrito" class="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total">0</span></p>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tienda de Ropa</p>
+            <p>Teléfono: (123) 456-7890</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
