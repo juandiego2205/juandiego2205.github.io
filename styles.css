@@ -1,19 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background: linear-gradient(to bottom, #f7d1e3, #f0eeee);
     color: #333;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #ff69b4;
+    background-color: #d63384;
     color: white;
     padding: 1em 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -25,6 +27,7 @@ header .container {
 
 header h1 {
     margin: 0;
+    font-size: 1.5em;
 }
 
 nav ul {
@@ -42,23 +45,60 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b11a6c;
 }
 
 main {
     margin-top: 5em;
     padding: 2em;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: rgb(250, 160, 160);
+    background: url('fondo2.jpeg') no-repeat center center/cover;
+    color: #ff69b4;
     text-align: center;
     padding: 5em 0;
+    border-radius: 15px;
 }
 
 .hero-content h2 {
     margin: 0;
     font-size: 3em;
+    animation: fadeInDown 1s;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    animation: fadeInUp 1s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .productos {
@@ -74,54 +114,56 @@ main {
 
 .producto {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1em;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .producto:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .producto img {
-    max-width: 100%;
-    border-radius: 8px 8px 0 0;
+    width: 200;
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio del contenedor */
+    border-radius: 15px 15px 0 0;
 }
 
 .producto h3 {
-    color: #ff69b4;
+    color: #d63384;
 }
 
 .producto p {
-    color: #ff69b4;
+    color: #555;
+    font-weight: bold;
 }
 
-.producto button {
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.producto button:hover {
-    background-color: #ff1493;
-}
-
-.carrito {
+.testimonios {
+    padding: 2em 0;
+    background-color: #f0eeee;
     text-align: center;
+    border-radius: 15px;
+}
+
+.testimonios .testimonio {
+    margin-bottom: 1em;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonios .testimonio p {
+    margin: 0.5em 0;
 }
 
 footer {
-    background-color: #ff69b4;
+    background-color: #d63384;
     color: white;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
 }
 
@@ -130,5 +172,4 @@ footer .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
 }
